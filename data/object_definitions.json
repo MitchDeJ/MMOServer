@@ -1,0 +1,13 @@
+[
+	{
+		"type":0,
+		"name":"Bush",
+		"size":1
+	},
+	
+	{
+		"type":1,
+		"name":"Sign",
+		"size":2
+	}
+]
