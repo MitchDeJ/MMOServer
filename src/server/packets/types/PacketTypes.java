@@ -3,7 +3,8 @@ package server.packets.types;
 public enum PacketTypes {
 	INVALID(-1),
 	NEW_PLAYER(01),
-	PING(02);
+	PING(02),
+	KEYSTATE(03);
 	
 	private int packetId;
 	

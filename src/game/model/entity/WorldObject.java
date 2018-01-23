@@ -1,4 +1,8 @@
-package game;
+package game.model.entity;
+
+import game.model.map.ObjectDefinition;
+import game.model.map.ObjectManager;
+import game.model.map.ObjectType;
 
 public class WorldObject extends Entity {
 	

@@ -1,4 +1,4 @@
-package game;
+package game.model.map;
 
 public class ObjectDefinition {
 	

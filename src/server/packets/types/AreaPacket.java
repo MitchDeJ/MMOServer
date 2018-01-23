@@ -1,8 +1,8 @@
 package server.packets.types;
 
-import game.Area;
-import game.Tile;
-import game.WorldObject;
+import game.model.entity.WorldObject;
+import game.model.map.Area;
+import game.model.map.Tile;
 
 public class AreaPacket extends Packet {
 	

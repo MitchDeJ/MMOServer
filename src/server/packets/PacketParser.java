@@ -3,8 +3,8 @@ package server.packets;
 import java.net.InetAddress;
 import java.util.ArrayList;
 
-import game.Area;
-import game.Player;
+import game.model.entity.player.Player;
+import game.model.map.Area;
 import server.Server;
 import server.packets.types.AreaPacket;
 import server.packets.types.Packet;
@@ -45,6 +45,10 @@ public class PacketParser {
 			p.pendingPings = 0;
 			break;
 		
+		case KEYSTATE:
+			server.log(message);
+			break;
+			
 		default:
 			server.log("Received unhandled packet!");
 			break;

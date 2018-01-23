@@ -6,8 +6,8 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.util.List;
 
-import game.Player;
-import game.World;
+import game.model.entity.player.Player;
+import game.model.map.World;
 import server.packets.PacketParser;
 import server.packets.PacketReceiver;
 

@@ -1,4 +1,4 @@
-package game;
+package game.model.entity;
 
 
 public abstract class Entity {

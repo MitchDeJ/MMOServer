@@ -3,7 +3,7 @@ package server;
 import java.util.ArrayList;
 import java.util.List;
 
-import game.Player;
+import game.model.entity.player.Player;
 import server.packets.types.Packet;
 import server.packets.types.PingPacket;
 

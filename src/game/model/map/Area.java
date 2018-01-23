@@ -1,8 +1,10 @@
-package game;
+package game.model.map;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import game.model.entity.WorldObject;
 
 public class Area {
 	

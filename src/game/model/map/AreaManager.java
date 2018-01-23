@@ -1,4 +1,4 @@
-package game;
+package game.model.map;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import game.model.entity.WorldObject;
 import json.JSONArray;
 import json.JSONObject;
 import json.parser.JSONParser;
