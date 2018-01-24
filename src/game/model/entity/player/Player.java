@@ -11,7 +11,7 @@ public class Player extends Entity {
 	private InetAddress ip;
 	private int port;
 	
-	public KeyState keys = new KeyState();
+	private KeyState keys = new KeyState();
 	
 	private long ping = 0;
 	public long pingSent = 0;
@@ -56,6 +56,10 @@ public class Player extends Entity {
 			x--;
 		if (keys.RIGHT)
 			x++;
+	}
+
+	public KeyState getKeys() {
+		return keys;
 	}
 
 }

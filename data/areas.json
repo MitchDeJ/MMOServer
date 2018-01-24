@@ -1,6 +1,6 @@
 [
 	{
-		"name":"Test Area"
+		"name":"Test Area",
 		"width":20,
 		"height":15,
 		"tiles":"
@@ -35,7 +35,7 @@
 	},
 
 	{
-		"name":"Test Area 2"
+		"name":"Test Area 2",
 		"width":20,
 		"height":15,
 		"tiles":"

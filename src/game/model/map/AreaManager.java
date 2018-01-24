@@ -1,7 +1,10 @@
 package game.model.map;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,6 +14,7 @@ import json.JSONArray;
 import json.JSONObject;
 import json.parser.JSONParser;
 import json.parser.ParseException;
+import server.Config;
 
 public class AreaManager {
 
@@ -21,8 +25,17 @@ public class AreaManager {
 		//Create json objects
 	    JSONParser parser = new JSONParser();
 		JSONArray a = null;
+		InputStream in; 
+		BufferedReader reader;
+		
 		try {
-			a = (JSONArray) parser.parse(new FileReader("data/areas.json"));
+			if (!Config.developerMode) {
+				in = AreaManager.class.getResourceAsStream("/data/areas.json");
+				reader = new BufferedReader(new InputStreamReader(in));
+				a = (JSONArray) parser.parse(reader);
+			} else {
+				a = (JSONArray) parser.parse(new FileReader("data/areas.json"));
+			}
 		} catch (IOException | ParseException e) {
 			e.printStackTrace();
 		}

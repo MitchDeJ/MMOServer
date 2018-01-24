@@ -1,13 +1,17 @@
 package game.model.map;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 
 import json.JSONArray;
 import json.JSONObject;
 import json.parser.JSONParser;
 import json.parser.ParseException;
+import server.Config;
 
 public class ObjectManager {
 	
@@ -20,8 +24,17 @@ public class ObjectManager {
 		//Create json objects
         JSONParser parser = new JSONParser();
 		JSONArray a = null;
+		InputStream in; 
+		BufferedReader reader;
+		
 		try {
-			a = (JSONArray) parser.parse(new FileReader("data/object_definitions.json"));
+			if (!Config.developerMode) {
+				in = ObjectManager.class.getResourceAsStream("/data/object_definitions.json");
+				reader = new BufferedReader(new InputStreamReader(in));
+				a = (JSONArray) parser.parse(reader);
+			} else {
+				a = (JSONArray) parser.parse(new FileReader("data/object_definitions.json"));
+			}
 		} catch (IOException | ParseException e) {
 			e.printStackTrace();
 		}

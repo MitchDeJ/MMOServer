@@ -46,7 +46,10 @@ public class PacketParser {
 			break;
 		
 		case KEYSTATE:
-			server.log(message);
+			p.getKeys().UP = Boolean.parseBoolean(parseIndex(message, 0));
+			p.getKeys().RIGHT = Boolean.parseBoolean(parseIndex(message, 1));
+			p.getKeys().DOWN = Boolean.parseBoolean(parseIndex(message, 2));
+			p.getKeys().LEFT = Boolean.parseBoolean(parseIndex(message, 3));
 			break;
 			
 		default:
